@@ -10,6 +10,10 @@
     </style>
 </head>
 <body>
+    <a href="{{ route('product.store') }}" 
+        style="background-color: #28a745; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px; display: inline-block; margin-bottom: 20px;">
+        ➕ เพิ่มสินค้าทดสอบ (เก้าอี้ไม้สักทอง)
+    </a>
     <h1>รายการสินค้าจาก Supabase</h1>
     <table>
         <tr>

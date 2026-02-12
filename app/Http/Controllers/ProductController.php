@@ -1,12 +1,13 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\Product;
+
+use App\Http\Controllers\Controller;
+use App\Models\Product; // <--- เรียกใช้พิมพ์เขียวจากข้างบน
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
-    //
     public function store()
     {
         Product::create([
@@ -16,7 +17,8 @@ class ProductController extends Controller
             'categories' => 'เก้าอี้',
             'woodtype' => 'สัก',
             'price' => 2500.00,
-            'unit' => '1'
+            'unit' => '1',
+            'stock' => 10 // ตรวจสอบว่าใน Supabase มีคอลัมน์นี้แล้ว
         ]);
 
         return "เพิ่มข้อมูลเรียบร้อยแล้ว!";
